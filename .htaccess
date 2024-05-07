@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^(.*)$ /wpnextjs/.next/$1 [L]

@@ -1,0 +1,10 @@
+
+
+.breadcrumb-item a{
+    text-decoration: none;
+    color: #000;
+}
+
+.breacrumb-active-item a{
+    font-weight: bold;
+}
