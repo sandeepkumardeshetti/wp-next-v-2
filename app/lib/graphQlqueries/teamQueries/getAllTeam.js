@@ -8,6 +8,14 @@ export const getAllTeam = async() => {
         query team {
             teams {
               nodes {
+                teamImages {
+                  fieldGroupName
+                  teamNewImage {
+                    node {
+                      mediaItemUrl
+                    }
+                  }
+                }
                 id
                 title
                 slug
@@ -24,7 +32,7 @@ export const getAllTeam = async() => {
                 teamWebsiteLink
                 teamWorkExperience
                 teamImage
-                teamImageUrl
+                teamImageLink
               }
             }
           }

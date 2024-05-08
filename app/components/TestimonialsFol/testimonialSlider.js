@@ -46,14 +46,17 @@ const TestimonialSlider = (props) => {
     const sanitizer = dompurify.sanitize;
 
     return (
+    
         <Slider {...slickSettings} className='row testimonial-slider-one'>
             {
                 props.testiData.map((testimonial) => {
+                  const image = testimonial.testiImage.testiImage
+                  const finaltestiImg = image !== null ? image.node.mediaItemUrl : ""
                     return (
                         <div className="col-md-6 mb-5" key={testimonial.id}>
                             <div className="card">
                                 <div className="card-content">
-                                    <Image width={300} height={300} src="" className="card-img-top" alt="" />
+                                    <Image width={300} height={300} src={finaltestiImg} className="card-img-top" alt="" />
                                     <div className="content">
                                         <h3 className="card-title">{testimonial.title} </h3>
                                         <h5>{testimonial.testimonialDesignation}</h5>

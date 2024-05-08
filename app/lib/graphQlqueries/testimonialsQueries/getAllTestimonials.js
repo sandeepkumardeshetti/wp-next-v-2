@@ -16,6 +16,13 @@ export const getAllTestimonials = async() => {
               testimonialImageUrl
               testimonialOrganization
               title
+              testiImage {
+                testiImage {
+                  node {
+                    mediaItemUrl
+                  }
+                }
+              }
             }
           }
         }
