@@ -10,24 +10,20 @@ export default function Home() {
       <Articles />
       <Team />
       <Testimonialss />
-      <Articles />
       <Team />
       <Testimonialss />
-      <Articles />
       <Team />
       <Testimonialss />
-      <Articles />
       <Team />
       <Testimonialss />
-      <Articles />
       <Team />
       <Testimonialss />
-      <Articles />
       <Team />
       <Testimonialss />
-      <Articles />
+
       <Team />
       <Testimonialss />
+     
     </main>
   );
 }

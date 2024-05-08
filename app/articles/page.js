@@ -60,7 +60,7 @@ const Articles = async () => {
                                         <div className="card bg-transparent border-0 d-flex flex-column justify-content-between h-100">
                                             <figure className="">
                                                 <Link href={`/articles/${article.node.slug}`}>
-                                                    <Image className="img-fluid card-img-top rounded-0" width={500} height={500} alt="Enim architecto amet quia" title="Enim architecto amet quia" src={article.node.featuredImage.node.mediaItemUrl} />
+                                                    <Image priority={true} className="img-fluid card-img-top rounded-0" width={500} height={500} alt="Enim architecto amet quia" title="Enim architecto amet quia" src={article.node.featuredImage.node.mediaItemUrl} />
                                                 </Link>
                                             </figure>
                                             <div className="card-body  px-0 d-flex flex-column justify-content-between">
