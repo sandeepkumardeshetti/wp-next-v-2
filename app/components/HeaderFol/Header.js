@@ -30,7 +30,7 @@ const Header = async () => {
                     <div className="row align-items-center">
                         <div className="col-lg-2">
                             <a className="navbar-brand md d-none d-lg-block" href="/">
-                                <Image width={200} height={100}  src="http://localhost/wpicms/wp-content/uploads/2024/02/logo-1.svg" alt="logo" className="logo md" />
+                                <Image width={200} height={100}  src="https://wpdemo.gclientdemo.com/wp-content/uploads/2024/02/logo-1.svg" alt="logo" className="logo md" />
                             </a>
                         </div>
                         <div className="col-lg-10">
@@ -75,7 +75,7 @@ const Header = async () => {
                                 <div className="container">
                                     {/* <!-- Navbar Brand for mobile--> */}
                                     <a className="navbar-brand xs d-lg-none" href="/">
-                                        <Image width={200} height={100} src="http://localhost/wpicms/wp-content/uploads/2024/02/logo-1.svg" alt="logo" className="logo xs" />
+                                        <Image width={200} height={100} src="https://wpdemo.gclientdemo.com/wp-content/uploads/2024/02/logo-1.svg" alt="logo" className="logo xs" />
                                     </a>
                                     {/* <!-- Offcanvas Navbar --> */}
                                     <div className="offcanvas offcanvas-end"  id="offcanvas-navbar">
