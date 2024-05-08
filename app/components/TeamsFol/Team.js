@@ -28,6 +28,9 @@ const Team = async () => {
 
   const AllTeamRes = await getTeamFunc();
   const finalTeamArr = AllTeamRes.teams.nodes;
+  console.log(finalTeamArr)
+
+
 
   
   return (
@@ -36,14 +39,14 @@ const Team = async () => {
      
         {
           finalTeamArr.map((team, index) => {
-            // const image = team.teamImages.teamNewImage
-            // const finalTeamImg = image !== null ? image.node.mediaItemUrl : ""
-            console.log(finalTeamImg)
+            const image = team.teamImages.teamNewImage
+            const finalTeamImg = image !== null ? image.node.mediaItemUrl : ""
+          
             return (
               <div id={`teamid-${team.teamId}`} key={team.teamId} className="col-md-6 col-lg-3 mb-5">
                 <div className="card">
                   <div className="team-image">
-                    <Image width={400} height={400} src="" className="card-img-top" alt="Charles John" />
+                    <Image width={400} height={400} src={finalTeamImg} className="card-img-top" alt="Charles John" />
                   </div>
                   <div className="card-body">
                     <h3 className="card-title">{team.title}</h3>

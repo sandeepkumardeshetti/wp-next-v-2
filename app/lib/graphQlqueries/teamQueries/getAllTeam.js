@@ -6,36 +6,32 @@ export const getAllTeam = async() => {
     const query = {
         query : `
         query team {
-            teams {
-              nodes {
-                teamImages {
-                  fieldGroupName
-                  teamNewImage {
-                    node {
-                      mediaItemUrl
-                    }
+          teams {
+            nodes {
+              teamImages {
+                teamNewImage {
+                  node {
+                    mediaItemUrl
                   }
                 }
-                id
-                title
-                slug
-                teamDesignation
-                teamEmail
-                teamFbLink
-                teamFullDescription
-                teamId
-                teamLinkedinLink
-                teamName
-                teamPhone
-                teamShortDescription
-                teamTwitterLink
-                teamWebsiteLink
-                teamWorkExperience
-                teamImage
-                teamImageLink
               }
+              title(format: RENDERED)
+              teamFullDescription
+              teamFbLink
+              teamEmail
+              teamDesignation
+              slug
+              link
+              teamLinkedinLink
+              teamName
+              teamPhone
+              teamShortDescription
+              teamTwitterLink
+              teamWebsiteLink
+              teamWorkExperience
             }
           }
+        }
         `
     }
     const resJson = await graphqlrequets(query);

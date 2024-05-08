@@ -17,7 +17,6 @@ async function getTestiFunc() {
 
 const Testimonialss = async () => {
     const AllTestiRes = await getTestiFunc();
-    console.log(AllTestiRes.testimonials.nodes);
     const finalTesiArr = AllTestiRes.testimonials.nodes
 
     return (
