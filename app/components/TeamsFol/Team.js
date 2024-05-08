@@ -28,7 +28,7 @@ const Team = async () => {
 
   const AllTeamRes = await getTeamFunc();
   const finalTeamArr = AllTeamRes.teams.nodes;
-  console.log(finalTeamArr[0].teamImages.teamNewImage.node.mediaItemUrl)
+
   
   return (
     <div className='container' >
