@@ -14,16 +14,16 @@ import { getAllArticles } from '@/app/lib/graphQlqueries/articlesQueries/getAllA
 
 export async function generateStaticParams() {
     const getAllart = await getAllArticles();
- 
-    
+
+
     return getAllart.articles.edges.map((post) => ({
-      params: {
-        slug: post.node.slug,
-      },
+        params: {
+            slug: post.node.slug,
+        },
     }));
 }
 
-  
+
 
 async function SingleArticleFunc(postId) {
     const articleRes = await getSingleArticle(postId);
@@ -32,12 +32,11 @@ async function SingleArticleFunc(postId) {
 
 
 const SingleArticle = async ({ params }) => {
-    
 
-  
+
+
     const article = await SingleArticleFunc(params.slug);
     const getAllart = await getAllArticles();
-    // console.log(getAllart.articles.edges)
 
     if (!article) {
         return <div>Loading...</div>;
@@ -47,14 +46,14 @@ const SingleArticle = async ({ params }) => {
             <div className='container' >
                 <div className="single-article-con">
                     <h2 className='mb-5' >{article.title}</h2>
-                    <Image className="img-fluid  mb-5" width={500} height={500}  alt={article.featuredImage.node.altText} src={article.featuredImage.node.mediaItemUrl} />
+                    <Image className="img-fluid  mb-5" width={500} height={500} alt={article.featuredImage.node.altText} src={article.featuredImage.node.mediaItemUrl} />
                     <div className="single-article-content-con" dangerouslySetInnerHTML={{ __html: article.content }}>
                     </div>
-                    <div class="social-media-group mt-5">
-                        <p class=""> Share On     <Link class="mx-1" href="" target="_blank"><FaFacebook /></Link>
-                            <Link class="me-2" href="" target="_blank"><FaTwitter /></Link>
-                            <Link class="me-2" href="" target="_blank"><FaLinkedin /></Link>
-                            <Link class="me-2" href="" target="_blank"><FaPinterest /></Link>
+                    <div className="social-media-group mt-5">
+                        <p className=""> Share On     <Link className="mx-1" href="" target="_blank"><FaFacebook /></Link>
+                            <Link className="me-2" href="" target="_blank"><FaTwitter /></Link>
+                            <Link className="me-2" href="" target="_blank"><FaLinkedin /></Link>
+                            <Link className="me-2" href="" target="_blank"><FaPinterest /></Link>
                         </p>
                     </div>
                 </div>

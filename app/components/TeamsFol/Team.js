@@ -28,11 +28,9 @@ const Team = async () => {
 
   const AllTeamRes = await getTeamFunc();
   const finalTeamArr = AllTeamRes.teams.nodes;
-  console.log(finalTeamArr)
 
 
 
-  
   return (
     <div className='container' >
       <div className="row team-layout-one ">

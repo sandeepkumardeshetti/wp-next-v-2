@@ -13,6 +13,9 @@ const graphqlrequets = async (query) => {
       ),
   });
   const resjson = await res.json();
+
+
+ 
   return resjson;
 }
 

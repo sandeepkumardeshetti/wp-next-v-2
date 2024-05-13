@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './article.css'
 import { getAllArticles } from '../lib/graphQlqueries/articlesQueries/getAllArticles';
@@ -8,10 +9,10 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 
 
+
 import Image from 'next/image'
 
-
-
+import ArticlesSec from '../components/ArticlesSec';
 
 
 
@@ -26,9 +27,19 @@ async function getAllArticlesFunc() {
 
 const Articles = async () => {
     const allArticlesRes = await getAllArticlesFunc();
-    console.log('allArticlesRes', allArticlesRes.articles.edges)
-    // Function to replace URLs
-
+    console.log(allArticlesRes.articles.pageInfo.hasNextPage);
+    const renderComponent= () =>{
+        if(allArticlesRes.articles.pageInfo.hasNextPage){
+            return(
+                <div>Has Next Page</div>
+            )
+        }else{
+            return(
+                <div>Has No Next Page</div>
+            )
+        }
+    }
+   
 
     return (
         <main>
@@ -53,32 +64,7 @@ const Articles = async () => {
                             </div>
                         </div>
 
-                        {
-                            allArticlesRes.articles.edges.map((article, index) => {
-                                return (
-                                    <div key={article.node.slug} className="col-md-6 col-lg-3 card-cols-con">
-                                        <div className="card bg-transparent border-0 d-flex flex-column justify-content-between h-100">
-                                            <figure className="">
-                                                <Link href={`/articles/${article.node.slug}`}>
-                                                    <Image priority={true} className="img-fluid card-img-top rounded-0" width={500} height={500} alt="Enim architecto amet quia" title="Enim architecto amet quia" src={article.node.featuredImage.node.mediaItemUrl} />
-                                                </Link>
-                                            </figure>
-                                            <div className="card-body  px-0 d-flex flex-column justify-content-between">
-                                                <h3 className="blog-title "><Link className="line-clamp line-clamp-3" href={`/articles/${article.node.slug}`}>{article.node.title}</Link></h3>
-                                                <div className="social-media-group">
-                                                    <Link href="" target="_blank" className="ps-0"><FaFacebook /></Link>
-                                                    <Link href="" target="_blank" className="ps-2"><FaTwitter /></Link>
-                                                    <Link href="" target="_blank" className="ps-2"><FaLinkedin /></Link>
-                                                    <Link href="" target="_blank" className="ps-2"><FaPinterest /></Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )
-                            })
-                        }
-
-
+                        <ArticlesSec articlesData={allArticlesRes} />
 
                         <div className="col-md-6  dis-btn-con d-lg-none my-4">
                             <a className=" fs-24 " href="#0">Discover more<div className="text-center d-inline">
@@ -87,27 +73,13 @@ const Articles = async () => {
                             </a>
                         </div>
                     </div>
-                    <nav aria-label="Page navigation example text-center">
-                    <ul className="pagination d-flex justify-content-center">
-                        <li className="page-item"><a className="page-link" href="#">Previous</a></li>
-                        <li className="page-item"><a className="page-link" href="#">1</a></li>
-                        <li className="page-item"><a className="page-link" href="#">2</a></li>
-                        <li className="page-item"><a className="page-link" href="#">3</a></li>
-                        <li className="page-item"><a className="page-link" href="#">Next</a></li>
-                    </ul>
-                </nav>
+                    
+                    {/* {renderComponent()} */}
 
 
                 </div>
-
-                
-
-
             </section >
         </main>
-
-        // <DomPurify domClass="container" domData={replacedContent} />
-
     )
 }
 
