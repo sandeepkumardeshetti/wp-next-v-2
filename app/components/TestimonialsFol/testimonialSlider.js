@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 const TestimonialSlider = (props) => {
     var slickSettings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 2000,
         slidesToShow: 2,
