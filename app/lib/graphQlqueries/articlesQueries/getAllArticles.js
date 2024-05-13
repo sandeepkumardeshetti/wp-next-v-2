@@ -2,11 +2,11 @@ import graphqlrequets from "../graphqlrequets";
 
 
 
-export const getAllArticles = async (endCursor = null, direction = 'forward',startCursor=null) => {
+export const getAllArticles = async (endCursor = null, direction = 'forward',startCursor=null, first=2) => {
   // const condition = `after: "${endCursor}", first: 3, where: {orderby: {field: DATE, order: DESC}}`;
   let condition;
   if (direction === 'forward') {
-    condition = `after: "${endCursor}", first: 2, where: {orderby: {field: DATE, order: DESC}}`;
+    condition = `after: "${endCursor}", first: ${first}, where: {orderby: {field: DATE, order: DESC}}`;
   } else if (direction === 'backward') {
     condition = `before: "${startCursor}", last: 2, where: {orderby: {field: DATE, order: DESC}}`;
   }

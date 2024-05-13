@@ -9,21 +9,14 @@ import { FaPinterest } from "react-icons/fa";
 import Image from 'next/image'
 import { getAllArticles } from '@/app/lib/graphQlqueries/articlesQueries/getAllArticles';
 
-
-
-
 export async function generateStaticParams() {
     const getAllart = await getAllArticles();
-
-
     return getAllart.articles.edges.map((post) => ({
         params: {
             slug: post.node.slug,
         },
     }));
 }
-
-
 
 async function SingleArticleFunc(postId) {
     const articleRes = await getSingleArticle(postId);
@@ -32,12 +25,8 @@ async function SingleArticleFunc(postId) {
 
 
 const SingleArticle = async ({ params }) => {
-
-
-
     const article = await SingleArticleFunc(params.slug);
     const getAllart = await getAllArticles();
-
     if (!article) {
         return <div>Loading...</div>;
     }
