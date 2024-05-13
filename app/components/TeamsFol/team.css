@@ -3,6 +3,9 @@
 .team-layout-two {
   padding: 70px 0px;
 }
+.team-layout-one .team-image img{
+  height: auto;
+}
 .team-layout-one .card,
 .team-layout-two .card,
 .team-layout-four .card {
