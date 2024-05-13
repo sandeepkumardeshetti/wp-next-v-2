@@ -6,7 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
-import { allArticlesServerAction } from './serverActions/allArticlesActions';
+import { allArticlesServerAction } from '../serverActions/allArticlesActions';
 
 
 
@@ -21,7 +21,6 @@ const ArticlesSec = ({ articlesData }) => {
     const [backwardBtn, setBackwardBtn] = useState(true)
 
     const [direction, setDirection] = useState('forward')
-
 
 
     async function fetchNewData() {
@@ -45,7 +44,6 @@ const ArticlesSec = ({ articlesData }) => {
         } finally {
             setLoading(false);
 
-            console.log(direction)
 
         }
     }

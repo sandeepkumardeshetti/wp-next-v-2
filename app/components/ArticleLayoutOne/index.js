@@ -10,7 +10,7 @@ import { FaPinterest } from "react-icons/fa";
 
 import Image from 'next/image'
 import { getAllArticles } from '@/app/lib/graphQlqueries/articlesQueries/getAllArticles';
-import ArticlesSec from '../ArticlesSec';
+import ArticlesSec from '../articlesComponents/ArticlesSec';
 
 
 async function getAllArticlesFunc() {
