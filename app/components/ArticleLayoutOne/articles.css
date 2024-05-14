@@ -640,3 +640,9 @@ color: var(--black);
    
 
 }
+
+.monsterret-500{
+    font-family: var(--font-monsterret);
+    font-weight: 500;
+    
+}

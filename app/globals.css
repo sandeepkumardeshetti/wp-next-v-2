@@ -15,3 +15,27 @@
   --Cod-Gray: #171717;
   --regal-blue: #013974;
 }
+
+body{
+  /* font-family: var(--rochester-font); */
+}
+
+.rochester-font{
+  font-family: var(--rochester-font)!important;
+}
+.monsterreat-700{
+  font-family: var(--font-monsterret) !important;
+  font-weight: 700;
+}
+.monsterreat-600{
+  font-family: var(--font-monsterret) !important;
+  font-weight: 600;
+}
+.monsterreat-500{
+  font-family: var(--font-monsterret) !important;
+  font-weight: 500;
+}
+
+.postsen{
+  font-family: var(--postsen) !important;
+}
