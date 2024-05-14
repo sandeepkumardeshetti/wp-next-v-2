@@ -10,6 +10,12 @@ async function getAllFaqsFunc() {
     return allFaqs;
 }
 
+export const metadata = {
+    title: "Faq",
+    description: "Frequently asked questions",
+  };
+
+
 
 const Faq = async () => {
     const allFaqs = await getAllFaqsFunc();

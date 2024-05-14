@@ -10,6 +10,12 @@ async function getAllArticlesMain() {
     return allArticles;
 }
 
+export const metadata = {
+    title: "Articles",
+    description: "list of articles",
+  };
+  
+
 
 const Articles = async () => {
   

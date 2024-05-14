@@ -75,7 +75,7 @@ const LoadMore = ({ newArticles, setNewArticles }) => {
         <div className='text-center my-5'>
 
             <button className={`btn btn-primary ${!loadHasNextPage ? 'd-none' : 'd-inline-block'}`} onClick={handleLoadMore} >
-                <span class={`${!loading ?  'd-none' : 'd-inline-block' } spinner-border spinner-border-sm me-2`} role="status" aria-hidden="true"></span>
+                <span className={`${!loading ?  'd-none' : 'd-inline-block' } spinner-border spinner-border-sm me-2`} role="status" aria-hidden="true"></span>
                 {loadButtonText}</button>
             {/* <button class="btn btn-primary" type="button" >
                 <span class={`${!loading ?  'd-none' : 'd-inline-block' }spinner-border spinner-border-sm me-2`} role="status" aria-hidden="true"></span>

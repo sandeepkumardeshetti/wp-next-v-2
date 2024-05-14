@@ -1,5 +1,5 @@
 import React from 'react'
-// export const dynamicParams = true;
+
 import { getSingleArticle } from '@/app/lib/graphQlqueries/articlesQueries/getSingleArticle';
 import Link from 'next/link';
 import { FaFacebook } from "react-icons/fa";
@@ -8,6 +8,13 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import Image from 'next/image'
 import { getAllArticles } from '@/app/lib/graphQlqueries/articlesQueries/getAllArticles';
+
+
+export function generateMetadata({ params, searchParams }){
+    return{
+        title : `Article | ${params.slug}`
+    }
+}
 
 export async function generateStaticParams() {
     const getAllart = await getAllArticles();
