@@ -20,11 +20,11 @@ const ArticlesMainSec = ({articlesData}) => {
                     return (
                         <div key={article.node.slug} className="col-md-6 col-lg-3 card-cols-con">
                             <div className="card bg-transparent border-0 d-flex flex-column justify-content-between h-100">
-                                <figure className="">
+                                
                                     <Link href={`/articles/${article.node.slug}`}>
                                         <Image className="img-fluid card-img-top rounded-0" width={500} height={500} alt="Enim architecto amet quia" title="Enim architecto amet quia" src={article.node.featuredImage.node.mediaItemUrl} />
                                     </Link>
-                                </figure>
+                        
                                 <div className="card-body  px-0 d-flex flex-column justify-content-between">
                                     <h3 className="blog-title "><Link className="line-clamp line-clamp-3" href={`/articles/${article.node.slug}`}>{article.node.title}</Link></h3>
                                     <div className="social-media-group">
