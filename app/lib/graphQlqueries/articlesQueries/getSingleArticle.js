@@ -24,7 +24,7 @@ export  const getSingleArticle = async(slug) => {
         }
       }`
     }
-    const resJson = await graphqlrequets(query);
+    const resJson =  await graphqlrequets(query);
       const singleArticle = resJson.data.article;
       return singleArticle;
   }

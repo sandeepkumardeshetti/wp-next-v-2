@@ -1,7 +1,7 @@
-"use server"
+// "use server"
 import React from 'react'
 import './articles.css'
-// import { getAllArticles } from '../lib/graphQlqueries/articlesQueries/getAllArticles';
+
 import Link from 'next/link';
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -10,15 +10,18 @@ import { FaPinterest } from "react-icons/fa";
 
 import Image from 'next/image'
 import { getAllArticles } from '@/app/lib/graphQlqueries/articlesQueries/getAllArticles';
-import ArticlesSec from '../articlesComponents/ArticlesSec';
 
 
+import dynamic from 'next/dynamic';
+
+const ArticlesSec = dynamic(() => import('../articlesComponents/ArticlesSec'), {
+  ssr: false
+});
 
 async function getAllArticlesFunc() {
     const allArticles = await getAllArticles();
     return allArticles;
 }
-
 
 
 const ArticlesLayoutOne = async () => {

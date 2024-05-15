@@ -21,8 +21,6 @@ async function getMainMenuItemsFunc() {
 
 const Header = async () => {
     const MainmenuRes = await getMainMenuItemsFunc();
-
-
     return (
         <header id="mastheader" className="site-header">
             <div className="navbar-layout-1">

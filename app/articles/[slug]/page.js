@@ -25,15 +25,10 @@ export async function generateStaticParams() {
     }));
 }
 
-async function SingleArticleFunc(postId) {
-    const articleRes = await getSingleArticle(postId);
-    return articleRes;
-}
-
 
 const SingleArticle = async ({ params }) => {
-    const article = await SingleArticleFunc(params.slug);
-    const getAllart = await getAllArticles();
+    const article =  await getSingleArticle(params.slug);
+    // required code
     if (!article) {
         return <div>Loading...</div>;
     }

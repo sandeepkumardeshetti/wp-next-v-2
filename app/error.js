@@ -6,7 +6,7 @@ const ErrorBoundary = ({reset}) => {
   return (
     <div>
     Something HAs gone wrong. 
-    <Link href="/team" >team</Link>
+    <Link href="/" >Homw</Link>
     <button onClick={reset}>Try Again</button>
     </div>
   )

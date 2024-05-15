@@ -10,7 +10,7 @@ const ErrorBoundary = ({ error,reset}) => {
   }, [error])
   return (
     <div>
-      Errore in articles
+      Errore in single product
       <button onClick={reset}>Try again</button>
     </div>
   )

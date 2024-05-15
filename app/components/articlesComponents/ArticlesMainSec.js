@@ -10,6 +10,8 @@ import LoadMore from '../LoadMore';
 import Image from 'next/image';
 
 
+
+
 const ArticlesMainSec = ({articlesData}) => {
     const [newArticles, setNewArticles] = useState(articlesData);
     return (
