@@ -10,7 +10,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import { montserrat, postsen, rock } from "@/fonts/font";
 
 import "./globals.css";
-
+import Script from 'next/script';
 
 
 

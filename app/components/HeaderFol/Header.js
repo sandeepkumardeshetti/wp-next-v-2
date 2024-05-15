@@ -30,7 +30,7 @@ const Header = async () => {
                     <div className="row align-items-center">
                         <div className="col-lg-2">
                             <a className="navbar-brand md d-none d-lg-block" href="/">
-                                <Image width={200} height={100}  src="https://wpdemo.gclientdemo.com/wp-content/uploads/2024/02/logo-1.svg" alt="logo" className="logo md" />
+                                <Image priority width={200} height={100}  src="https://wpdemo.gclientdemo.com/wp-content/uploads/2024/02/logo-1.svg" alt="logo" className="logo md" />
                             </a>
                         </div>
                         <div className="col-lg-10">
