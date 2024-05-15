@@ -12,6 +12,7 @@ export const metadata = {
   };
 
   import dynamic from 'next/dynamic';
+import LoadingSkeleton from '../components/loading';
 
 const ArticlesMainSec = dynamic(() => import('../components/articlesComponents/ArticlesMainSec'), {
   ssr: false
@@ -29,6 +30,7 @@ const Articles = async () => {
     return (
         <main>
             <div className='container' >
+                {/* <LoadingSkeleton /> */}
               <ArticlesMainSec articlesData={allArticlesMain}/>
                 
             </div>

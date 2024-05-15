@@ -7,7 +7,6 @@ import Image from 'next/image'
 
 
 
-
 async function getProductsFunc() {
     const AllProducts = await getAllProducts();
     return AllProducts;
@@ -16,7 +15,7 @@ async function getProductsFunc() {
 const Productspage = async () => {
     const AllProductsRes = await getProductsFunc();
     const allProductsArr = AllProductsRes.products.edges;
-
+  
     return (
         <main className='container'>
             <div className='row products-layout-one__slider ' >
@@ -30,7 +29,7 @@ const Productspage = async () => {
                                             <Link className="text-decoration-none" href={`/products/${product.node.slug}`}>{product.node.title}</Link>
                                         </h3>
                                         <Link  href={`/products/${product.node.slug}`}>
-                                            <Image width={300} height={300} className="img-fluid w-100 my-3" alt={product.node.featuredImage.node.altText} src={product.node.featuredImage.node.mediaItemUrl} /></Link>
+                                            <Image   width={300} height={300} className="img-fluid w-100 my-3" alt={product.node.featuredImage.node.altText} src={product.node.featuredImage.node.mediaItemUrl} /></Link>
                                         
                                         <DomPurify domClass="card-text line-clamp line-clamp-4 p-0 text-decoration-none" domData={product.node.content} />
                                         <div className="text-end read-more-btn-con">
