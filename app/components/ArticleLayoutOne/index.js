@@ -9,7 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 
 import Image from 'next/image'
-import { getAllArticles } from '@/app/lib/graphQlqueries/articlesQueries/getAllArticles';
+import { getAllArticles } from '../../lib/graphQlqueries/articlesQueries/getAllArticles';
 
 
 import dynamic from 'next/dynamic';

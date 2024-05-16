@@ -1,10 +1,10 @@
-import DomPurify from '@/app/components/domPurify';
-import { SingleProduct } from '@/app/lib/graphQlqueries/productQueries/getSingleProduct'
+import DomPurify from '../../components/domPurify';
+import { SingleProduct } from '../../lib/graphQlqueries/productQueries/getSingleProduct'
 import Link from 'next/link';
 import React from 'react'
 import Image from 'next/image'
-import { getAllProducts } from '@/app/lib/graphQlqueries/productQueries/getAllProducts';
-import placeholderDataUri from '@/app/lib/placeholderDataUri';
+import { getAllProducts } from '../../lib/graphQlqueries/productQueries/getAllProducts';
+import placeholderDataUri from '../../lib/placeholderDataUri';
 
 
 

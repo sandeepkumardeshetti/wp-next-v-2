@@ -3,12 +3,12 @@ import './team.css';
 import { LuMail } from "react-icons/lu";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { IoGlobeSharp } from "react-icons/io5";
-import { getAllTeam } from '@/app/lib/graphQlqueries/teamQueries/getAllTeam';
+import { getAllTeam } from '../../lib/graphQlqueries/teamQueries/getAllTeam';
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import DomPurify from '../domPurify';
-import { getTeamPageContent } from '@/app/lib/graphQlqueries/teamQueries/getTeamPageContent';
+
 
 import Image from 'next/image'
 

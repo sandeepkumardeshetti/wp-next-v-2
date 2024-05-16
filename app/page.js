@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Articles from "./articles/page";
+
 import Team from "./components/TeamsFol/Team";
 import Testimonialss from "./components/TestimonialsFol/Testimonialss";
 import ArticlesLayoutOne from "./components/ArticleLayoutOne";

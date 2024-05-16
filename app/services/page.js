@@ -5,6 +5,7 @@ import DomPurify from '../components/domPurify';
 import Link from 'next/link';
 import getPageContent from '../lib/getPageContent';
 import Image from 'next/image'
+import placeholderDataUri from '../lib/placeholderDataUri';
 
 
 
@@ -17,6 +18,7 @@ const Servicespage = async () => {
     const AllServicesRes = await getServicesFunc();
     console.log(AllServicesRes.services.nodes[0].featuredImage.node.mediaItemUrl);
     const servicesArr = AllServicesRes.services.nodes
+    const placeholderImage = placeholderDataUri()
 
     // const servicesPageContent = await getPageContent('209');
     return (
@@ -38,7 +40,7 @@ const Servicespage = async () => {
                                                     {service.title}				</Link>
                                             </h3>
                                             <Link href={`/services/${service.slug}`} >
-                                                <Image width={300} height={400}  className="img-fluid w-100 my-3"  src={service.featuredImage.node.mediaItemUrl} alt="service" /></Link>
+                                                <Image placeholder={placeholderImage} width={300} height={400}  className="img-fluid w-100 my-3"  src={service.featuredImage.node.mediaItemUrl} alt="service" /></Link>
                                             <DomPurify domClass="card-text line-clamp line-clamp-4 p-0 mb-4" domData={service.content} />
                                             
                                             <div className="text-end read-more-btn-con">

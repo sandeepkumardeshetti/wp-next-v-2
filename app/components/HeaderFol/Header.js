@@ -1,12 +1,15 @@
+
 import React from 'react'
 import './Header.css'
 
+
 import Link from 'next/link'
 
-import { getMainMenu } from '@/app/lib/graphQlqueries/menuQueries/getMainMenu'
+import { getMainMenu } from '../../lib/graphQlqueries/menuQueries/getMainMenu'
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import Image from 'next/image'
+// import { usePathname } from 'next/navigation'
 
 
 
@@ -21,6 +24,7 @@ async function getMainMenuItemsFunc() {
 
 const Header = async () => {
     const MainmenuRes = await getMainMenuItemsFunc();
+    // const pathName = usePathname()
     return (
         <header id="mastheader" className="site-header">
             <div className="navbar-layout-1">

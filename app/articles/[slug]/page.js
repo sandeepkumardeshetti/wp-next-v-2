@@ -1,13 +1,14 @@
 import React from 'react'
 
-import { getSingleArticle } from '@/app/lib/graphQlqueries/articlesQueries/getSingleArticle';
+import { getSingleArticle } from '../../lib/graphQlqueries/articlesQueries/getSingleArticle';
 import Link from 'next/link';
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import Image from 'next/image'
-import { getAllArticles } from '@/app/lib/graphQlqueries/articlesQueries/getAllArticles';
+import { getAllArticles } from '../../lib/graphQlqueries/articlesQueries/getAllArticles';
+
 
 
 export function generateMetadata({ params, searchParams }){

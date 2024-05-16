@@ -7,7 +7,7 @@ import BootstrapClient from "./components/BootstrapClient";
 import { AOSInit } from "./lib/aos-anima";
 
 import '@fortawesome/fontawesome-free/css/all.css';
-import { montserrat, postsen, rock } from "@/fonts/font";
+import { montserrat, postsen, rock } from "../fonts/font";
 
 import "./globals.css";
 import Script from 'next/script';

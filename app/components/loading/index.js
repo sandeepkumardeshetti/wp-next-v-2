@@ -3,53 +3,53 @@ import './index.css'
 
 const LoadingSkeleton = () => {
     return (
-        <div class="container">
+        <div className="container">
             <div className='row'>
-            <div class="col-sm-6 col-md-3">
-                <div class="movie--isloading">
-                    <div class="loading-image"></div>
-                    <div class="loading-content">
-                        <div class="loading-text-container">
-                            <div class="loading-main-text"></div>
-                            <div class="loading-sub-text"></div>
+            <div className="col-sm-6 col-md-3">
+                <div className="movie--isloading">
+                    <div className="loading-image"></div>
+                    <div className="loading-content">
+                        <div className="loading-text-container">
+                            <div className="loading-main-text"></div>
+                            <div className="loading-sub-text"></div>
                         </div>
-                        <div class="loading-btn"></div>
+                        <div className="loading-btn"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="movie--isloading">
-                    <div class="loading-image"></div>
-                    <div class="loading-content">
-                        <div class="loading-text-container">
-                            <div class="loading-main-text"></div>
-                            <div class="loading-sub-text"></div>
+            <div className="col-sm-6 col-md-3">
+                <div className="movie--isloading">
+                    <div className="loading-image"></div>
+                    <div className="loading-content">
+                        <div className="loading-text-container">
+                            <div className="loading-main-text"></div>
+                            <div className="loading-sub-text"></div>
                         </div>
-                        <div class="loading-btn"></div>
+                        <div className="loading-btn"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="movie--isloading">
-                    <div class="loading-image"></div>
-                    <div class="loading-content">
-                        <div class="loading-text-container">
-                            <div class="loading-main-text"></div>
-                            <div class="loading-sub-text"></div>
+            <div className="col-sm-6 col-md-3">
+                <div className="movie--isloading">
+                    <div className="loading-image"></div>
+                    <div className="loading-content">
+                        <div className="loading-text-container">
+                            <div className="loading-main-text"></div>
+                            <div className="loading-sub-text"></div>
                         </div>
-                        <div class="loading-btn"></div>
+                        <div className="loading-btn"></div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3">
-                <div class="movie--isloading">
-                    <div class="loading-image"></div>
-                    <div class="loading-content">
-                        <div class="loading-text-container">
-                            <div class="loading-main-text"></div>
-                            <div class="loading-sub-text"></div>
+            <div className="col-sm-6 col-md-3">
+                <div className="movie--isloading">
+                    <div className="loading-image"></div>
+                    <div className="loading-content">
+                        <div className="loading-text-container">
+                            <div className="loading-main-text"></div>
+                            <div className="loading-sub-text"></div>
                         </div>
-                        <div class="loading-btn"></div>
+                        <div className="loading-btn"></div>
                     </div>
                 </div>
             </div>

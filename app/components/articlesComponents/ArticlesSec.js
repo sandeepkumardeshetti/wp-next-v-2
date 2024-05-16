@@ -7,6 +7,8 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { allArticlesServerAction } from '../serverActions/allArticlesActions';
+import Image from 'next/image';
+import placeholderDataUri from '../../lib/placeholderDataUri';
 
 
 
@@ -21,6 +23,8 @@ const ArticlesSec = ({ articlesData }) => {
     const [backwardBtn, setBackwardBtn] = useState(true)
 
     const [direction, setDirection] = useState('forward')
+
+    const placeholderImage = placeholderDataUri()
 
 
     async function fetchNewData() {
@@ -69,7 +73,7 @@ const ArticlesSec = ({ articlesData }) => {
                                     <div className="card bg-transparent border-0 d-flex flex-column justify-content-between h-100">
                                         <figure className="">
                                             <Link href={`/articles/${article.node.slug}`}>
-                                                <img className="img-fluid card-img-top rounded-0" width={500} height={500} alt="Enim architecto amet quia" title="Enim architecto amet quia" src={article.node.featuredImage.node.mediaItemUrl} />
+                                                <Image placeholder={placeholderImage} className="img-fluid card-img-top rounded-0" width={500} height={500} alt="Enim architecto amet quia" title="Enim architecto amet quia" src={article.node.featuredImage.node.mediaItemUrl} />
                                             </Link>
                                         </figure>
                                         <div className="card-body  px-0 d-flex flex-column justify-content-between">

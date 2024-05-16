@@ -2,7 +2,7 @@
 
 import React from 'react'
 import './testimonials.css'
-import { getAllTestimonials } from '@/app/lib/graphQlqueries/testimonialsQueries/getAllTestimonials'
+import { getAllTestimonials } from '../../lib/graphQlqueries/testimonialsQueries/getAllTestimonials'
 
 
 import TestimonialSlider from './testimonialSlider';
