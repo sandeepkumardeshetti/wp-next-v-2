@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React from 'react'
 import Image from 'next/image'
 import { getAllProducts } from '@/app/lib/graphQlqueries/productQueries/getAllProducts';
+import placeholderDataUri from '@/app/lib/placeholderDataUri';
 
 
 
@@ -30,13 +31,14 @@ const SingleProductpage = async ({ params }) => {
     const getAllPro = await getAllProducts();
 
     const productData = await SingleProductFunc(params.uri);
-    console.log(productData.product)
+    const placeholderImage = placeholderDataUri()
+
     return (
         <main className='container' >
             <div className="row">
                 <div className="col-md-6 mb-3">
                     <div className="product-detail-img h-100">
-                        <Image width={500} height={400} className="img-fluid card-img-top  rounded-0" alt="Album" src={productData.product.featuredImage.node.mediaItemUrl} />            
+                        <Image placeholder={placeholderImage} width={500} height={400} className="img-fluid card-img-top  rounded-0" alt="Album" src={productData.product.featuredImage.node.mediaItemUrl} />            
                     </div>
                 </div>
                 <div className="col-md-6 mb-3">

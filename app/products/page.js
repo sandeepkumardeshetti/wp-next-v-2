@@ -4,6 +4,7 @@ import { getAllProducts } from '../lib/graphQlqueries/productQueries/getAllProdu
 import Link from 'next/link';
 import DomPurify from '../components/domPurify';
 import Image from 'next/image'
+import placeholderDataUri from '../lib/placeholderDataUri';
 
 
 
@@ -15,6 +16,7 @@ async function getProductsFunc() {
 const Productspage = async () => {
     const AllProductsRes = await getProductsFunc();
     const allProductsArr = AllProductsRes.products.edges;
+    const placeholderImage = placeholderDataUri()
   
     return (
         <main className='container'>
@@ -29,7 +31,7 @@ const Productspage = async () => {
                                             <Link className="text-decoration-none" href={`/products/${product.node.slug}`}>{product.node.title}</Link>
                                         </h3>
                                         <Link  href={`/products/${product.node.slug}`}>
-                                            <Image   width={300} height={300} className="img-fluid w-100 my-3" alt={product.node.featuredImage.node.altText} src={product.node.featuredImage.node.mediaItemUrl} /></Link>
+                                            <Image placeholder={placeholderImage}   width={300} height={300} className="img-fluid w-100 my-3" alt={product.node.featuredImage.node.altText} src={product.node.featuredImage.node.mediaItemUrl} /></Link>
                                         
                                         <DomPurify domClass="card-text line-clamp line-clamp-4 p-0 text-decoration-none" domData={product.node.content} />
                                         <div className="text-end read-more-btn-con">
