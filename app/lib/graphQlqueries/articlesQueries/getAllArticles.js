@@ -8,7 +8,7 @@ export const getAllArticles = async (endCursor = null, direction = 'forward',sta
   if (direction === 'forward') {
     condition = `after: "${endCursor}", first: ${first}, where: {orderby: {field: DATE, order: DESC}}`;
   } else if (direction === 'backward') {
-    condition = `before: "${startCursor}", last: 2, where: {orderby: {field: DATE, order: DESC}}`;
+    condition = `before: "${startCursor}", last: 3, where: {orderby: {field: DATE, order: DESC}}`;
   }
   const query = {
     query: `

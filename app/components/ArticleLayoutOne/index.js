@@ -1,5 +1,5 @@
 // "use server"
-import React from 'react'
+import React, { Suspense } from 'react'
 import './articles.css'
 
 import Link from 'next/link';
@@ -47,7 +47,11 @@ const ArticlesLayoutOne = async () => {
                                 </div>
                             </div>
                         </div>
+                        <Suspense fallback={<p>Loading Articles</p>}>
+
+                        
                         <ArticlesSec articlesData={allArticlesRes} />
+                        </Suspense>
                         <div className="col-md-6  dis-btn-con d-lg-none my-4">
                             <a className=" fs-24 " href="#0">Discover more<div className="text-center d-inline">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24.245" viewBox="0 0 37.6 24.245"><g id="Group_4189" data-name="Group 4189" transform="translate(0)"><g id="Group_4086" data-name="Group 4086" transform="translate(0 0)"><g id="Group_4085" data-name="Group 4085" transform="translate(0 24.245) rotate(-90)"><path id="Path_159984" data-name="Path 159984" d="M10.953,37.2.66,28.709A1.842,1.842,0,0,1,.4,26.152a1.874,1.874,0,0,1,2.557-.258l7.328,6.038V1.827a1.827,1.827,0,1,1,3.653,0V31.932l7.328-6.038a1.923,1.923,0,0,1,2.579.258,1.853,1.853,0,0,1-.258,2.557L13.273,37.2a1.872,1.872,0,0,1-2.321,0Z" fill="#000"></path></g></g></g></svg>

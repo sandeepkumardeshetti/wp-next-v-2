@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { Suspense } from 'react'
 import './article.css'
 import { getAllArticles } from '../lib/graphQlqueries/articlesQueries/getAllArticles';
 
@@ -7,38 +7,41 @@ import { getAllArticles } from '../lib/graphQlqueries/articlesQueries/getAllArti
 
 
 export const metadata = {
-    title: "Articles",
-    description: "list of articles",
-  };
+  title: "Articles",
+  description: "list of articles",
+};
 
-  import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic';
 import LoadingSkeleton from '../components/loading';
 
 const ArticlesMainSec = dynamic(() => import('../components/articlesComponents/ArticlesMainSec'), {
   ssr: false
 },);
 
-  
+
 const Articles = async () => {
 
-    const endCursor = null
-    const direction = "forward"
-    const startCursor = null
-    const first = 3
-    const allArticlesMain = await getAllArticles(endCursor, direction, startCursor, first)
-    // console.log(allArticlesMain)
-    return (
-        <main>
-            <div className='container' >
-                {/* <LoadingSkeleton /> */}
-              <ArticlesMainSec articlesData={allArticlesMain}/>
-                
-            </div>
+  const endCursor = null
+  const direction = "forward"
+  const startCursor = null
+  const first = 3
+  const allArticlesMain = await getAllArticles(endCursor, direction, startCursor, first)
+  // console.log(allArticlesMain)
+  return (
+    <main>
+      <div className='container' >
+        {/* <LoadingSkeleton /> */}
+        {/* <Suspense fallback={<p>Loading...</p>}> */}
+          <ArticlesMainSec articlesData={allArticlesMain} />
+
+        {/* </Suspense> */}
+
+      </div>
 
 
 
-        </main>
-    )
+    </main>
+  )
 }
 
 export default Articles
